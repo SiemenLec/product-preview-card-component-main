@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      background: hsl(30, 38%, 92%)
+    }
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      border-radius: 1rem;
+      margin: 1rem;
+      max-width: 24rem;
+      min-width: 20rem;
+    }
+    .img {
+      border-radius: 1rem 1rem 0 0;
+      width: 100%;
+    }
+    .text-container {
+      padding: 1.5rem;
+    }
+    .light-text {
+      color: hsl(228, 12%, 48%);
+      letter-spacing: 0.2rem;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .title {
+      margin-top: 0;
+      line-height: 110%;
+      font-family: 'Fraunces', serif;
+      color: hsl(212, 21%, 14%);
+    }
+    .description {
+      color: hsl(228, 12%, 48%);
+      font-size: 14px;
+    }
+    .price {
+      display: flex;
+      align-items: center;
+    }
+    .actual-price {
+      color: hsl(158, 36%, 37%);
+      font-family: 'Fraunces', serif;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: xx-large;
+      font-weight: 700;
+      display: inline-block;
+    }
+    .previous-price {
+      color: hsl(228, 12%, 48%);
+      display: inline-block;
+      text-decoration: line-through;
+      margin-left: 1rem;
+      font-size: 14px;
+    }
+    .button {
+      margin-top: 1rem;
+      background-color: hsl(158, 36%, 37%);
+      border: none;
+      padding: 1rem;
+      width: 100%;
+      border-radius: 0.6rem;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background-color: hsl(158, 35%, 30%);
+      cursor: pointer;
+    }
+    .cart-svg {
+      margin-right: 0.5rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .flex-container {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        max-width: 39rem;
+      }
+      .text-container {
+        padding: 2rem;
+      }
+      .img {
+        content:url(./images/image-product-desktop.jpg); 
+        max-height: 30rem;
+        object-fit: contain;
+        border-radius: 1rem 0 0 1rem;
+      }
+      .title {
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="flex-container">
+      <div class="container">
+        <img class="img" src="./images/image-product-mobile.jpg" alt="product">
+
+        <div class="text-container">
+          <p class="light-text">PERFUME</p>
+  
+          <h1 class="title">Gabrielle Essence Eau De Parfum</h1>
+      
+          <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.</p>
+            
+          <div class="price">
+            <p class="actual-price">$149.99</p>
+            <p class="previous-price">$169.99</p>
+          </div>
+
+      
+        <button class="button"><img class="cart-svg" src="./images/icon-cart.svg">Add to Cart</button> 
+        </div>
+
+      </div>
+
+    </div>
+</body>
+</html>
